@@ -691,6 +691,105 @@ p { color: var(--muted); font-size: 1rem; }
   margin: 0;
 }
 
+/* -------- 12b. NEXTIWEB PARTNER BAND -------- */
+.section.partner {
+  background:
+    linear-gradient(180deg, #061626 0%, #0A2540 60%, #061626 100%);
+  color: #fff;
+  position: relative; overflow: hidden;
+}
+.section.partner::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(800px circle at 80% 20%, rgba(0,194,209,0.14) 0%, transparent 60%),
+    radial-gradient(600px circle at 10% 90%, rgba(200,149,109,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section.partner::after {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 30%, transparent 80%);
+  pointer-events: none;
+}
+.section.partner > .container { position: relative; z-index: 1; }
+.section.partner h2, .section.partner h3 { color: #fff; }
+.section.partner .section-head p { color: rgba(248,251,253,0.78); }
+.section.partner .eyebrow { color: var(--cyan-400); }
+
+.grid-partner {
+  display: grid; gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.partner-card {
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  display: flex; flex-direction: column; gap: 14px;
+  transition: transform .35s var(--ease-out), border-color .35s var(--ease-out), background .35s var(--ease-out);
+  overflow: hidden;
+}
+.partner-card::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 0%), rgba(0,194,209,0.10), transparent 45%);
+  opacity: 0; transition: opacity .4s var(--ease-out);
+  pointer-events: none;
+}
+.partner-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,194,209,0.45);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 20px 50px rgba(6,22,38,0.5);
+}
+.partner-card:hover::before { opacity: 1; }
+.partner-card > * { position: relative; }
+
+.partner-icon {
+  width: 54px; height: 54px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, rgba(0,194,209,0.18), rgba(200,149,109,0.12));
+  border: 1px solid rgba(0,194,209,0.25);
+  color: var(--cyan-400);
+  border-radius: 14px; margin-bottom: 8px;
+}
+.partner-icon svg { width: 28px; height: 28px; }
+.partner-card h3 {
+  font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+  font-weight: 500;
+}
+.partner-card p {
+  color: rgba(248,251,253,0.74);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+.partner-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 6px;
+  font-weight: 600; font-size: 0.92rem;
+  color: var(--cyan-400);
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  align-self: flex-start;
+  transition: color .25s var(--ease-out), border-color .25s var(--ease-out), gap .25s var(--ease-out);
+}
+.partner-cta svg { transition: transform .25s var(--ease-out); }
+.partner-cta:hover {
+  color: #fff;
+  border-bottom-color: var(--cyan-400);
+  gap: 12px;
+}
+.partner-cta:hover svg { transform: translateX(3px); }
+
+@media (max-width: 1080px) {
+  .grid-partner { grid-template-columns: 1fr; gap: 16px; }
+}
+
 /* -------- 13. FOOTER -------- */
 .footer {
   background: var(--ink-900);

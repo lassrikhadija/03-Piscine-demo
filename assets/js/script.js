@@ -57,8 +57,8 @@
     document.addEventListener('mouseleave', () => cursor.classList.remove('active'));
   }
 
-  /* ---------- 4. Bento spotlight (suit la souris dans la card) ---------- */
-  $$('.bento-card').forEach(card => {
+  /* ---------- 4. Spotlight cards (suit la souris) ---------- */
+  $$('.bento-card, .partner-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
       card.style.setProperty('--mx', `${e.clientX - r.left}px`);
@@ -93,7 +93,7 @@
   });
 
   /* ---------- 7. Scroll reveal ---------- */
-  const targets = $$('.section-head, .bento-card, .gcard, .step, .review, .faq-item, .cta-text, .cta-form');
+  const targets = $$('.section-head, .bento-card, .gcard, .step, .review, .faq-item, .cta-text, .cta-form, .partner-card');
   targets.forEach(t => t.classList.add('reveal'));
 
   if ('IntersectionObserver' in window) {
