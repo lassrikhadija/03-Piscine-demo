@@ -19,4 +19,20 @@
     <xhtml:link rel="alternate" hreflang="en-CA" href="https://piscine-demo.nextiweb.ca/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://piscine-demo.nextiweb.ca/"/>
   </url>
+  <url>
+    <loc>https://piscine-demo.nextiweb.ca/politique-confidentialite.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://piscine-demo.nextiweb.ca/politique-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://piscine-demo.nextiweb.ca/en/privacy-policy.html"/>
+  </url>
+  <url>
+    <loc>https://piscine-demo.nextiweb.ca/en/privacy-policy.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://piscine-demo.nextiweb.ca/politique-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://piscine-demo.nextiweb.ca/en/privacy-policy.html"/>
+  </url>
 </urlset>
