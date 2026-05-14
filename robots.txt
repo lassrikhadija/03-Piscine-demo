@@ -1,6 +1,73 @@
+# robots.txt — Aqua Élite (site démo Nextiweb.ca)
+# Site de démonstration. Pour la vraie agence : https://nextiweb.ca
+
+# ---------------------------------------------------------------------
+# Crawlers traditionnels (Google, Bing, etc.)
+# ---------------------------------------------------------------------
 User-agent: *
 Allow: /
 Disallow: /scripts/
-Disallow: /images/optimized/
 
+# ---------------------------------------------------------------------
+# Crawlers IA / LLM — explicitement autorises (site demo public)
+# Resume du contexte disponible dans /llms.txt
+# ---------------------------------------------------------------------
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl (utilise par de nombreuses IA pour leurs datasets)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Bytespider (TikTok / ByteDance)
+User-agent: Bytespider
+Allow: /
+
+# Mistral AI
+User-agent: MistralAI-User
+Allow: /
+
+# ---------------------------------------------------------------------
+# Resources
+# ---------------------------------------------------------------------
 Sitemap: https://piscine-demo.nextiweb.ca/sitemap.xml
+
+# Resume du site pour LLM
+# Voir : https://piscine-demo.nextiweb.ca/llms.txt
