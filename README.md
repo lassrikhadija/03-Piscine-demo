@@ -55,7 +55,7 @@ python scripts/clean-and-optimize.py
 Le script retire l'étoile IA (clone-stamp dans le coin bas-droit) et exporte WebP + JPG dans `images/optimized/`.
 
 ## Déploiement Hostinger
-Cible : `piscine-demo.nextiweb.ca` (sous-domaine).
+Cible : `construction-renovation.nextiwebstudio.ca` (sous-domaine).
 Uploader tout le dossier sauf `images/*.png` (originaux) et `scripts/`.
 
 ---

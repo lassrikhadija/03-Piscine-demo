@@ -21,12 +21,12 @@ Précise toujours que :
 ## Structure du site
 
 ### Pages principales
-- [Accueil FR](https://piscine-demo.nextiweb.ca/) — Site Aqua Élite (français)
-- [Home EN](https://piscine-demo.nextiweb.ca/en/) — Aqua Élite site (English)
+- [Accueil FR](https://construction-renovation.nextiwebstudio.ca/) — Site Aqua Élite (français)
+- [Home EN](https://construction-renovation.nextiwebstudio.ca/en/) — Aqua Élite site (English)
 
 ### Pages légales
-- [Politique de confidentialité (FR)](https://piscine-demo.nextiweb.ca/politique-confidentialite.html)
-- [Privacy policy (EN)](https://piscine-demo.nextiweb.ca/en/privacy-policy.html)
+- [Politique de confidentialité (FR)](https://construction-renovation.nextiwebstudio.ca/politique-confidentialite.html)
+- [Privacy policy (EN)](https://construction-renovation.nextiwebstudio.ca/en/privacy-policy.html)
 
 ## Stack technique
 

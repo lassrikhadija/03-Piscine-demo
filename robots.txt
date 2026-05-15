@@ -67,7 +67,7 @@ Allow: /
 # ---------------------------------------------------------------------
 # Resources
 # ---------------------------------------------------------------------
-Sitemap: https://piscine-demo.nextiweb.ca/sitemap.xml
+Sitemap: https://construction-renovation.nextiwebstudio.ca/sitemap.xml
 
 # Resume du site pour LLM
-# Voir : https://piscine-demo.nextiweb.ca/llms.txt
+# Voir : https://construction-renovation.nextiwebstudio.ca/llms.txt
