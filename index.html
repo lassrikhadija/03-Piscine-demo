@@ -731,15 +731,6 @@
     </div>
   </div>
 
-  <div class="container footer-legal">
-    <a href="politique-confidentialite.html">Politique de confidentialité</a>
-    <a href="politique-confidentialite.html#cookies">Cookies</a>
-    <a href="#devis">Nous contacter</a>
-    <span class="footer-loi25" aria-label="Site conforme à la Loi 25 du Québec">
-      <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Conforme Loi&nbsp;25
-    </span>
-  </div>
   <div class="container footer-bar">
     <small>© 2026 Aqua Élite (démo). Tous droits réservés. RBQ&nbsp;1234-5678-90.</small>
     <small class="footer-credit">
@@ -759,6 +750,21 @@
   <span class="badge-dot" aria-hidden="true"></span>
   <span><strong>DÉMO</strong> · Créé par <em>Nextiweb.ca</em></span>
 </a>
+
+<!-- Popup consentement cookies (Loi 25) -->
+<aside class="cookie-banner" id="cookieBanner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" hidden>
+  <div class="cookie-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <div class="cookie-text">
+    <h3 id="cookie-title">Cookies &amp; confidentialité</h3>
+    <p id="cookie-desc">Ce site n'utilise que des cookies <strong>strictement essentiels</strong> (préférence de langue). Aucun tracking, aucun analytics tiers. Conforme <strong>Loi&nbsp;25</strong> du Québec. <a href="politique-confidentialite.html">En savoir plus →</a></p>
+  </div>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-compact" id="cookieAccept" type="button">J'ai compris</button>
+  </div>
+  <button class="cookie-close" id="cookieClose" type="button" aria-label="Fermer">×</button>
+</aside>
 
 <script src="assets/js/script.js" defer></script>
 </body>
