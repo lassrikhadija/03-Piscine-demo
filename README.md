@@ -60,4 +60,7 @@ Uploader tout le dossier sauf `images/*.png` (originaux) et `scripts/`.
 
 ---
 
-Démo conçue par [Nextiweb.ca](https://nextiweb.ca)
+Démo conçue par [Nextiweb.ca](https://nextiweb.ca) — fondatrice **Khadija Aït Lassri**
+
+- LinkedIn entreprise : <https://www.linkedin.com/company/25819184/>
+- LinkedIn personnel : <https://www.linkedin.com/in/khadija-ait-lassri/>
