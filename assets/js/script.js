@@ -149,4 +149,28 @@
   /* ---------- 10. Année footer (si placeholder) ---------- */
   const y = $('#year');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---------- 11. Popup consentement cookies ---------- */
+  const cookieBanner = $('#cookieBanner');
+  if (cookieBanner) {
+    const STORAGE_KEY = 'aquaElite_cookieConsent';
+    let dismissed = false;
+    try { dismissed = localStorage.getItem(STORAGE_KEY) === '1'; } catch (e) { /* localStorage indisponible (mode prive) */ }
+
+    if (!dismissed) {
+      setTimeout(() => {
+        cookieBanner.hidden = false;
+        requestAnimationFrame(() => cookieBanner.classList.add('visible'));
+      }, 1400);
+
+      const dismiss = () => {
+        cookieBanner.classList.remove('visible');
+        setTimeout(() => { cookieBanner.hidden = true; }, 500);
+        try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) { /* noop */ }
+      };
+
+      $('#cookieAccept')?.addEventListener('click', dismiss);
+      $('#cookieClose')?.addEventListener('click', dismiss);
+    }
+  }
 })();
