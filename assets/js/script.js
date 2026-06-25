@@ -42,13 +42,17 @@
  });
  document.addEventListener('mouseleave', () => cursor.classList.remove('active'));
  }
+ const cardRects = new WeakMap();
+ const cacheRect = card => cardRects.set(card, card.getBoundingClientRect());
  $$('.bento-card, .partner-card').forEach(card => {
+ cacheRect(card);
  card.addEventListener('mousemove', e => {
- const r = card.getBoundingClientRect();
+ const r = cardRects.get(card);
  card.style.setProperty('--mx', `${e.clientX - r.left}px`);
  card.style.setProperty('--my', `${e.clientY - r.top}px`);
  });
  });
+ window.addEventListener('resize', () => { $$('.bento-card, .partner-card').forEach(cacheRect); }, {passive:true});
  const filterBtns = $$('.filters .chip');
  const cards = $$('.gcard');
  filterBtns.forEach(btn => {
