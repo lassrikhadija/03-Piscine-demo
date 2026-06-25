@@ -10,12 +10,17 @@
  'Veuillez remplir correctement tous les champs requis.',
  };
  const header = $('#header');
+ let scrollRaf = false;
  const onScroll = () => {
- if (!header) return;
- header.classList.toggle('scrolled', window.scrollY > 20);
+ if (scrollRaf) return;
+ scrollRaf = true;
+ requestAnimationFrame(() => {
+ if (header) header.classList.toggle('scrolled', window.scrollY > 20);
+ scrollRaf = false;
+ });
  };
  window.addEventListener('scroll', onScroll, { passive: true });
- onScroll();
+ requestAnimationFrame(() => { if (header) header.classList.toggle('scrolled', window.scrollY > 20); });
  const navToggle = $('.nav-toggle');
  const mobileNav = $('#mobile-nav');
  if (navToggle && mobileNav) {
@@ -42,7 +47,7 @@
  });
  document.addEventListener('mouseleave', () => cursor.classList.remove('active'));
  }
- if (window.matchMedia('(hover:hover)').matches) {
+ if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
  const cardRects = new WeakMap();
  const cacheRect = card => cardRects.set(card, card.getBoundingClientRect());
  $$('.bento-card, .partner-card').forEach(card => {
