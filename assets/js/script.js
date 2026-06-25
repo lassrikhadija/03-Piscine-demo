@@ -42,6 +42,7 @@
  });
  document.addEventListener('mouseleave', () => cursor.classList.remove('active'));
  }
+ if (window.matchMedia('(hover:hover)').matches) {
  const cardRects = new WeakMap();
  const cacheRect = card => cardRects.set(card, card.getBoundingClientRect());
  $$('.bento-card, .partner-card').forEach(card => {
@@ -53,6 +54,7 @@
  });
  });
  window.addEventListener('resize', () => { $$('.bento-card, .partner-card').forEach(cacheRect); }, {passive:true});
+ }
  const filterBtns = $$('.filters .chip');
  const cards = $$('.gcard');
  filterBtns.forEach(btn => {
